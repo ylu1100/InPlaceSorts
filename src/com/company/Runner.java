@@ -3,9 +3,9 @@ package com.company;
 public class Runner {
 
     public static void main(String[] args) {
-	String[]arr = {"cat","dog","fish","owl","moose","alpaca"};
-	double[]arr2 = {1.6,34.7,3.7,9.81,3.14,2.7,4.6};
-	int[]arr3 = {12,6,56,7,4,3,6,73,41,8,5,2,9,20};
+        String[]arr = {"cat","dog","fish","owl","moose","alpaca"};
+        double[]arr2 = {1.6,34.7,3.7,9.81,3.14,2.7,4.6};
+        int[]arr3 = {12,6,56,7,4,3,6,73,41,8,5,2,9,20};
         for(String num:arr){
             System.out.print(num+" ");
         }
