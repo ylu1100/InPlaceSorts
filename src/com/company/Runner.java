@@ -34,9 +34,11 @@ public class Runner {
         for(int num:arr3){
             System.out.print(num+" ");
         }
+        int[] before3 = SortingUtil.copyintarray(arr3);
         System.out.println();
         long time3 = System.nanoTime();
         InPlaceSorts.insertionSort(arr3);
+        int[]after3=SortingUtil.copyintarray(arr3);
         for(int num:arr3){
             System.out.print(num+" ");
         }
