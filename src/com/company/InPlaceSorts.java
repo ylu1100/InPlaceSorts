@@ -14,7 +14,7 @@ public class InPlaceSorts {
     }
     public static void selectionSort(double[] list1) {
         for (int i = 0; i < list1.length; i++) {
-            SortingUtil.minIndex(list1,i);
+            SortingUtil.swap(list1,i,SortingUtil.minIndex(list1,i));
         }
     }
 }
