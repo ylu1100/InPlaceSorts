@@ -29,13 +29,13 @@ public class SortingUtil {
         return min;
     }
     public static int minIndex(double arr[],int ind){
-        for(int i = ind;i<arr.length;i++){
-            if(arr[i]<arr[ind]){
-                swap(arr,i,ind);
-                ind=i;
+        int index = ind;
+        for(int i = index+1;i<arr.length;i++){
+            if(arr[i]<arr[index]){
+                index=i;
             }
         }
-        return ind;
+        return index;
     }
 
 }
