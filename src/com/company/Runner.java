@@ -33,7 +33,7 @@ public class Runner {
         System.out.println("Time Taken: "+time2);
         long time3 = System.nanoTime();
         InPlaceSorts.insertionSort(arr3);
-        for(double num:arr3){
+        for(int num:arr3){
             System.out.print(num+" ");
         }
         System.out.println();
