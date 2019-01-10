@@ -37,6 +37,23 @@ public class SortingUtil {
         }
         return index;
     }
-
-
+    public static boolean checkSum(int[] before, int[] after) {
+        int sumbefore = 0;
+        int sumafter = 0;
+        for (int x = 0; x != before.length - 1; x++) {
+            sumbefore = sumbefore + before[x];
+        }
+        for (int y = 0; y != after.length - 1; y++) {
+            sumafter = sumafter + after[y];
+        }
+        return sumafter == sumbefore;
+    }
+    public static int[]copyintarray(int[]arr){
+        int[]copyarray=new int [arr.length];{
+                for(int i = 0;i<copyarray.length;i++){
+                    copyarray[i]=arr[i];
+                }
+                return copyarray;
+        }
+    }
 }
