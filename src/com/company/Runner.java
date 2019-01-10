@@ -31,5 +31,13 @@ public class Runner {
         System.out.println();
         time2 = System.nanoTime()-time2;
         System.out.println("Time Taken: "+time2);
+        long time3 = System.nanoTime();
+        InPlaceSorts.insertionSort(arr3);
+        for(double num:arr3){
+            System.out.print(num+" ");
+        }
+        System.out.println();
+        time3 = System.nanoTime()-time3;
+        System.out.println("Time Taken: "+time3);
     }
 }
