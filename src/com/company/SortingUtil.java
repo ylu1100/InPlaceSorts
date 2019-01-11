@@ -40,20 +40,28 @@ public class SortingUtil {
     public static boolean checkSum(int[] before, int[] after) {
         int sumbefore = 0;
         int sumafter = 0;
-        for (int x = 0; x != before.length - 1; x++) {
+        for (int x = 0; x < before.length; x++) {
             sumbefore = sumbefore + before[x];
         }
-        for (int y = 0; y != after.length - 1; y++) {
+        for (int y = 0; y <after.length; y++) {
             sumafter = sumafter + after[y];
         }
         return sumafter == sumbefore;
     }
     public static int[]copyintarray(int[]arr){
         int[]copyarray=new int [arr.length];{
-                for(int i = 0;i<copyarray.length;i++){
-                    copyarray[i]=arr[i];
-                }
-                return copyarray;
+            for(int i = 0;i<copyarray.length;i++){
+                copyarray[i]=arr[i];
+            }
+            return copyarray;
         }
+    }
+    public static boolean isSorted(int[] testArr) {
+        for (int x = 0; x < testArr.length - 1; x++) {
+            if (testArr[x] > testArr[x + 1]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
