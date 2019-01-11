@@ -3,9 +3,10 @@ package com.company;
 public class Runner {
 
     public static void main(String[] args) {
-        String[]arr = {"cat","dog","fish","owl","moose","alpaca"};
-        double[]arr2 = {1.6,34.7,3.7,9.81,3.14,2.7,4.6};
-        int[]arr3 = {12,6,56,7,4,3,6,73,41,8,5,2,9,20};
+        String[]arr = SortingUtil.randomStringArr(8,5);
+        double[]arr2 = SortingUtil.randomDoubleArr(8);
+        int[]arr3 = SortingUtil.randomIntArr(8);
+        System.out.println("BubbleSort");
         for(String num:arr){
             System.out.print(num+" ");
         }
@@ -18,19 +19,27 @@ public class Runner {
         System.out.println();
         time = System.nanoTime()-time;
         System.out.println("Time Taken: "+time);
-
+        System.out.println("Is it sorted?: "+SortingUtil.isSorted(arr));
+        System.out.println();
+        System.out.println("SelectionSort");
         for(double num:arr2){
             System.out.print(num+" ");
         }
         System.out.println();
         long time2 = System.nanoTime();
+        double[]before2 = SortingUtil.copydoublearray(arr2);
         InPlaceSorts.selectionSort(arr2);
+        double[]after2 = SortingUtil.copydoublearray(arr2);
         for(double num:arr2){
             System.out.print(num+" ");
         }
         System.out.println();
         time2 = System.nanoTime()-time2;
         System.out.println("Time Taken: "+time2);
+        System.out.println("Are the sums equal?: "+SortingUtil.checkSum(before2,after2));
+        System.out.println("Is it sorted?: "+SortingUtil.isSorted(arr2));
+        System.out.println();
+        System.out.println("InsertionSort");
         for(int num:arr3){
             System.out.print(num+" ");
         }
