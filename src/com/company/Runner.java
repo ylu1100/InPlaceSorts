@@ -34,9 +34,9 @@ public class Runner {
         for(int num:arr3){
             System.out.print(num+" ");
         }
-        int[] before3 = SortingUtil.copyintarray(arr3);
         System.out.println();
         long time3 = System.nanoTime();
+        int[] before3 = SortingUtil.copyintarray(arr3);
         InPlaceSorts.insertionSort(arr3);
         int[]after3=SortingUtil.copyintarray(arr3);
         for(int num:arr3){
@@ -45,5 +45,7 @@ public class Runner {
         System.out.println();
         time3 = System.nanoTime()-time3;
         System.out.println("Time Taken: "+time3);
+        System.out.println("Are the sums equal?: "+SortingUtil.checkSum(before3,after3));
+        System.out.println("Is it sorted?: "+SortingUtil.isSorted(arr3));
     }
 }
