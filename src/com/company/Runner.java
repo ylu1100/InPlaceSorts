@@ -6,8 +6,8 @@ public class Runner {
         String[]arr = SortingUtil.randomStringArr(8,5);
         double[]arr2 = SortingUtil.randomDoubleArr(8);
         int[]arr3 = SortingUtil.randomIntArr(8);
-        long timeStart=0;
-        long timeStop=0;
+        long timeStart;
+        long timeStop;
         System.out.println("BubbleSort");
         for(String num:arr){
             System.out.print(num+" ");
